@@ -4,9 +4,10 @@
     <title>Generic Title</title>
         <style>
             body{
-                background-color:rgb(195,228,255);
+                background-color: rgb(105,155,255);
                 text-align:center;
-                text-color:rgb(65,65,155); 
+                color:rgb(15,15,105); 
+                font-weight:30em;
             }
             ul{
                 list-style-position:inside;
@@ -14,15 +15,30 @@
             ol{
                 list-style-position:inside;
             }
+            .something{
+                color: teal;
+                font-weight:900;
+            }
         </style>
+        <script>
+            function changeBackground(){
+                alert("Testing");
+                document.body.style.backgroundColor = "red";
+            }
+        </script>
     </head>
 
     <body>
-        <img src="https://boygeniusreport.files.wordpress.com/2017/01/cat.jpg?quality=98&strip=all&w=782">
-        <h1> David Calderon</h1><hr>
+        <img src="https://boygeniusreport.files.wordpress.com/2017/01/cat.jpg?quality=98&strip=all&w=782" id="pic" onmouseover="document.getElementById('pic').src='https://ih0.redbubble.net/image.483633982.6622/mp,550x550,matte,ffffff,t.3u9.jpg'" onmouseout="document.getElementById('pic').src='https://boygeniusreport.files.wordpress.com/2017/01/cat.jpg?quality=98&strip=all&w=782'" style="width:50em;height:35em;">
+        <br><button type="button" onclick="changeBackground()"> click here </button>
+        <h1 style="color:black;"> David Calderon</h1><hr>
+        <!-- document.getElementsByTagName("BODY")[0].backgroundColor="red"; -->
         <p>
             San Diego Native 02
-            <br>"Life is 10% what happens to you and 90% how you react to it"
+            <br>
+        </p>
+        <p>
+            "Life is 10% what happens to you and 90% how you react to it"
         </p>
         <br>
         <h3>About:</h3>
@@ -39,7 +55,7 @@
         <br>
         <h3>Favorite Foods:</h3>
         <ol>
-            <li>carne asada fries</li>
+            <li class="something">carne asada fries</li>
             <li>a good burrito</li>
         </ol>
     </body>
